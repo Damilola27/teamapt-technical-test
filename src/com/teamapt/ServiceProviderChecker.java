@@ -17,7 +17,7 @@ public class ServiceProviderChecker {
     }
 
     public static void main(String[] args) throws Exception {
-        String path = "./src/com/teamapt/PhoneNumbers.txt";
+        String path = "PhoneNumbers.txt";
         File file = new File(path);
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
 
