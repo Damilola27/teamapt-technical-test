@@ -17,7 +17,8 @@ public class ServiceProviderChecker {
     }
 
     public static void main(String[] args) throws Exception {
-        File file = new File("/home/damilola/Documents/PhoneNumbers.txt");
+        String path = "src/com/teamapt/PhoneNumbers.txt";
+        File file = new File(path);
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
 
         Long strtTime = System.currentTimeMillis();
