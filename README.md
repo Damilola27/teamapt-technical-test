@@ -12,7 +12,7 @@ This is a java application that generates a summary report with the total number
    git clone https://github.com/Damilola27/teamapt-technical-test.git
     ```
 1. ```shell
-   cd teamapt-technical-test
+   cd teamapt-technical-test/src/com/teamapt
     ```
 1. ```shell
    javac ServiceProviderChecker.java
