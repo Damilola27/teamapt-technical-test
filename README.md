@@ -18,5 +18,5 @@ This is a java application that generates a summary report with the total number
    javac ServiceProviderChecker.java
     ```
 1. ```shell
-   java ServiceProviderChecker
+   java ServiceProviderChecker.java
     ```
