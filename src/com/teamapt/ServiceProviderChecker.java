@@ -6,6 +6,11 @@ import java.util.Map;
 
 public class ServiceProviderChecker {
     private static final Map<String, Integer> serviceProvidersMap;
+//    private static int mtn;
+//    private static int glo;
+//    private static int mtel;
+//    private static int airtel;
+//    private static int nineMobile;
 
     static {
         serviceProvidersMap = new HashMap<>();
@@ -17,20 +22,22 @@ public class ServiceProviderChecker {
     }
 
     public static void main(String[] args) throws Exception {
-        String path = "./src/com/teamapt/resources/PhoneNumbers.txt";
+        String path = "./PhoneNumbers.txt";
         File file = new File(path);
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
 
-        Long strtTime = System.currentTimeMillis();
         String str;
         while ((str = bufferedReader.readLine()) != null) {
             checkNetwork(str);
         }
-        Long endTime = System.currentTimeMillis();
-        long timeSpent = endTime - strtTime;
-        System.out.println("time spent is: " + timeSpent);
-
         System.out.println(serviceProvidersMap);
+
+
+//        System.out.printf("mtn: %d%n", mtn);
+//        System.out.printf("airtel: %d%n", airtel);
+//        System.out.printf("mtel: %d%n", mtel);
+//        System.out.printf("glo: %d%n", glo);
+//        System.out.printf("nineMobile: %d%n", nineMobile);
 
 
     }
@@ -40,22 +47,27 @@ public class ServiceProviderChecker {
         if (isMTN(number)){
             int users = serviceProvidersMap.get("MTN");
             serviceProvidersMap.replace("MTN", ++users);
+//            ++mtn;
         }else {
             if (is9Mobile(number)){
                 int users = serviceProvidersMap.get("9MOBILE");
                 serviceProvidersMap.replace("9MOBILE", ++users);
+//                ++nineMobile;
             }else{
                 if(isAirtel(number)){
                     int users = serviceProvidersMap.get("Airtel");
                     serviceProvidersMap.replace("Airtel", ++users);
+//                    ++airtel;
                 }else{
                     if(isGlobacom(number)){
                         int users = serviceProvidersMap.get("Globacom");
                         serviceProvidersMap.replace("Globacom", ++users);
+//                        ++glo;
                     }else{
                         if(isMtel(number)){
                             int users = serviceProvidersMap.get("MTEL");
                             serviceProvidersMap.replace("MTEL", ++users);
+//                            ++mtel;
                         }
                     }
                 }
