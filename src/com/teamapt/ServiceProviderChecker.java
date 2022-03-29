@@ -67,7 +67,6 @@ public class ServiceProviderChecker {
                         if(isMtel(number)){
                             int users = serviceProvidersMap.get("MTEL");
                             serviceProvidersMap.replace("MTEL", ++users);
-//                            ++mtel;
                         }
                     }
                 }
